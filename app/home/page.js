@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:4000';
+const API_URL = process.env.SERVER_URL;
 
 export default function Home() {
   const [file, setFile] = useState(null);
