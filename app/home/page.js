@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+const API_URL = 'http://localhost:4000';
+
 export default function Home() {
   const [file, setFile] = useState(null);
   const [text, setText] = useState('');
@@ -54,7 +56,7 @@ export default function Home() {
       formData.append('file', file);
       formData.append('text', text);
 
-      const response = await axios.post('/api/synthesize', formData, {
+      const response = await axios.post(`${API_URL}/api/synthesize`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
