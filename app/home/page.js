@@ -56,7 +56,7 @@ export default function Home() {
       formData.append('file', file);
       formData.append('text', text);
 
-      const response = await axios.post(`${API_URL}/api/synthesize`, formData, {
+      const response = await axios.post(`${SERVER_URL}/api/synthesize`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
